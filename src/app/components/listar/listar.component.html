@@ -1,0 +1,60 @@
+
+
+<div class="container mt-4">
+
+ 
+        <div class="row my-4">
+            <div class="col-8 offset-2 d-flex justify-content-between align-content-center">
+                <p class="fw-bold h1">vista de productos</p>
+                <button class="btn btn-warning" [routerLink]="['/crear'] " routerLinkActive="router-link-active">crear producto</button>
+            </div>
+
+        </div>
+
+        <div class="col-8 offset-2">
+
+    
+        <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">UBICACION</th>
+            <th scope="col">PRECIO</th>
+            <th scope="col">PROVEEDOR</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+           
+            <td>1</td>
+            <td>Coca cola</td>
+            <td>pasillo 2</td>
+            <td>5000</td>
+            <td>Proveedor</td>
+            <td>
+                <i class="fas fa-edit " [routerLink]="['/editar/1'] " routerLinkActive="router-link-active"></i>
+                <i class="fas fa-trash"  ></i>
+
+            </td>
+          </tr>
+          <tr>
+            
+            <td>2</td>
+            <td>Ponque</td>
+            <td>pasillo 5</td>
+            <td>3000</td>
+            <td>Ramo</td>
+            <td>
+                <i class="fas fa-edit" [routerLink]="['/editar/1'] " routerLinkActive="router-link-active"></i>
+                <i class="fas fa-trash"></i>
+
+            </td>
+          </tr>
+    
+        </tbody>
+      </table>
+
+</div>
+</div>

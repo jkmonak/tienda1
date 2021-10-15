@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <p class="h1 text-center fw-bold">Registrar Cliente</p>
+      </div>
+<div class="col-6 offset-3">
+    <form class="mt-5" [formGroup]="clienteForm" (ngSubmit)="registroCliente()" >
+      <div class="my-3">
+        <input formControlName= "clienteNombre"
+          class="form-control form-control-lg"
+          type="text"
+          placeholder="Nombres" 
+        />
+        <span *ngIf="clienteForm.get('clienteNombre')?.hasError('required') && clienteForm.get('clienteNombre')?.touched" class="text-danger fw-bold" >El nombre es obliigatorio</span>
+      
+      </div>
+      <div class="my-4">
+        <input formControlName="clienteDireccion"
+          class="form-control form-control-lg"
+          type="text"
+          placeholder="Direccion" 
+        />
+        <span *ngIf="clienteForm.get('clienteDireccion')?.hasError('required') && clienteForm.get('clienteDireccion')?.touched" class="text-danger fw-bold" >la direccion es obliigatoria</span>
+      
+      </div>
+      <div class="my-4">
+        <input formControlName="clienteTelefono"
+          class="form-control form-control-lg"
+          type="text"  
+          placeholder="Telefono"
+        />
+        <span *ngIf="clienteForm.get('clienteTelefono')?.hasError('required') && clienteForm.get('clienteTelefono')?.touched" class="text-danger fw-bold" >El telefono es obliigatorio</span>
+      </div>
+      <div class="my-2">
+        <input formControlName="clienteCorreo"
+          class="form-control form-control-lg"
+          type="text"
+          placeholder="Correo"
+        />
+        <span *ngIf="clienteForm.get('clienteCorreo')?.hasError('required') && clienteForm.get('clienteCorreo')?.touched" class="text-danger fw-bold" >El correo es obliigatorio</span>
+      </div>
+      <div class="col-6 offset-3 d-flex justify-content-between align-content-center">
+        <button class="btn btn-danger" [routerLink]="['']" routerLinkActive="router-link-active" >Cancelar</button>
+        <button type="submit" class="btn btn-success" [disabled]="clienteForm.invalid"> Guardar</button>
+    </div>
+    </form>
+  </div>
+
+</div>
+</div>
